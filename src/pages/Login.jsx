@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const submitForm = () => {
   console.log("Submitting form");
@@ -12,7 +13,7 @@ const Login = ({ name }) => {
   return (
     <div>
       <div>
-        <div style={{ display: `${name === "vender"}? block : none` }}>
+        <div style={{ display: name === "vendor" ? "block" : "none" }}>
           <div>Chart</div>
           <div>Back</div>
         </div>
@@ -26,7 +27,9 @@ const Login = ({ name }) => {
           <br />
           <input type="password" id="Pass" name="Pass" />
           <br />
-          <button onClick={submitForm}>Login</button>
+          <Link to={`/${name}`}>
+            <button>Sign In</button>
+          </Link>
           <button onClick={clear}>Cancel</button>
         </form>
       </div>

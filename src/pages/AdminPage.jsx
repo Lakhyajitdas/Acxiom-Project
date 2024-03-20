@@ -1,40 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Admin = () => {
   return (
     <div>
       <div>
-        <div>Home</div>
-        <div>LogOut</div>
+        <Link to={"/"}>
+          <button>Home</button>
+        </Link>
+        <Link to={"/"}>
+          <button>LogOut</button>
+        </Link>
       </div>
 
       <div>Welcome Admin</div>
 
       <div>
-        <div>Maintain User</div>
-        <div>Maintain Vendor</div>
-      </div>
-    </div>
-  );
-};
+        <Link to={"/maintainuser"}>
+          <button>Maintain User</button>
 
-const MaintainUser = () => {
-  return (
-    <div>
-      <div>
-        <div>Membership</div>
-        <div>
-          <div>Add</div>
-          <div>Update</div>
-        </div>
-      </div>
-
-      <div>
-        <div>User Management</div>
-        <div>
-          <div>Add</div>
-          <div>Update</div>
-        </div>
+          <button>Maintain Vendor</button>
+        </Link>
       </div>
     </div>
   );

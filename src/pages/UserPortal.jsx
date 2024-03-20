@@ -1,15 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const User = () => {
   return (
     <div>
       <div>Welcome Use </div>
       <div>
-        <div>Vendor</div>
-        <div>Cart</div>
+        <Link to={"/vendor"}>
+          <button>Vendor</button>
+        </Link>
+        <Link to={"/cart"}>
+          <button>Cart</button>
+        </Link>
         <div>Guest List</div>
-        <div>Order Status</div>
-        <div>LogOut</div>
+        <Link to={"/"}>
+          <button>Order Status</button>
+        </Link>
+        <Link to={"/"}>
+          <button>Log Out</button>
+        </Link>
       </div>
     </div>
   );

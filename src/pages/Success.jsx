@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Success = () => {
   return (
@@ -24,7 +25,9 @@ const Success = () => {
           <div>Pin Code</div>
         </div>
 
-        <div>Continue Shopping</div>
+        <Link to={"/user"}>
+          <button>Continue Shopping</button>
+        </Link>
       </div>
     </div>
   );

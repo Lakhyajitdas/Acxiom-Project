@@ -15,25 +15,39 @@ import Update from "./pages/Update";
 import UserPortal from "./pages/UserPortal";
 import VendorPage from "./pages/VendorPage";
 import Vendor from "./pages/Vendor";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useLocalStorage } from "@uidotdev/usehooks";
+import MaintainUser from "./pages/MaintainUser";
 
 function App() {
   return (
     <div className="App">
-      <Signup />
-      <AdminPage />
-      <AddItem />
-      <Cart />
-      <CheckOut />
-      <Homepage />
-      <Login />
-      <Products />
-      <ProductStatus />
-      <RequestItem />
-      <Success />
-      <Update />
-      <UserPortal />
-      <Vendor />
-      <VendorPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/usersignup" element={<Signup name={"user"} />} />
+          <Route path="/vendorsignup" element={<Signup name={"vendor"} />} />
+          <Route path="/maintainuser" element={<MaintainUser />} />
+
+          <Route path="/adminsignup" element={<Signup name={"admin"} />} />
+
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/additem" element={<AddItem />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/adminlogin" element={<Login name={"admin"} />} />
+          <Route path="/vendorlogin" element={<Login name={"vendor"} />} />
+          <Route path="/userlogin" element={<Login name={"user"} />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/productstatus" element={<ProductStatus />} />
+          <Route path="/requestitem" element={<RequestItem />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/update" element={<Update />} />
+          <Route path="/user" element={<UserPortal />} />
+          <Route path="/vendor" element={<Vendor />} />
+          <Route path="/vendorpage" element={<VendorPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

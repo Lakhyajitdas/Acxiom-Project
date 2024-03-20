@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductStatus = () => {
   return (
@@ -29,7 +30,9 @@ const ProductStatus = () => {
           <div>{"     "}</div>
         </div>
         <div>
-          <div>Update</div>
+          <Link to={"/update"}>
+            <button>Update</button>
+          </Link>
           <div>{"     "}</div>
         </div>
         <div>

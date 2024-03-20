@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles.module.css";
+import { Link } from "react-router-dom";
 
 const submitForm = () => {
   console.log("nova");
@@ -9,11 +10,11 @@ const handleChange = () => {
   console.log("nova");
 };
 
-const Signup = (name) => {
+const Signup = ({ name }) => {
   return (
     <div>
       <div>
-        <div style={{ display: `${name !== "vender"}? block : none` }}>
+        <div>
           <div>Chart</div>
           <div>Back</div>
         </div>
@@ -48,7 +49,7 @@ const Signup = (name) => {
             <input type="password" id="Pass" name="Pass" />
           </div>
 
-          <div style={{ display: `${name === "vender"}? block : none` }}>
+          <div style={{ display: name === "vendor" ? "block" : `none` }}>
             <label className={styles.label} htmlFor="Category">
               Category
             </label>
@@ -63,7 +64,10 @@ const Signup = (name) => {
               <option value="Lighting">Lighting</option>
             </select>
           </div>
-          <button onClick={submitForm}>Singup</button>
+
+          <Link to={`/${name}`}>
+            <button>Sign Up</button>
+          </Link>
         </form>
       </div>
     </div>
