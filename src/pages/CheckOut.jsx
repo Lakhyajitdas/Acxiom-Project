@@ -2,29 +2,57 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CheckOut = () => {
-  return (
-    <div>
-      <div>Item</div>
-      <div>Details</div>
+  const styles = {
+    cartContainerChild: {
+      backgroundColor: "blue",
+      color: "white",
+      padding: "10px 20px",
+    },
+    cartContainer: {
+      display: "flex",
+      flexDirection: "row",
+      margin: "20px 0px",
+      gap: "20px",
+      justifyContent: "space-between",
+    },
+    item: {
+      backgroundColor: "blue",
+      color: "white",
+      padding: "10px 20px",
+      width: "30%",
+    },
+  };
 
-      <div>
-        <div>Name</div>
-        <div>Number</div>
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        margin: "20px 100px",
+        gap: "20px",
+      }}
+    >
+      <div style={styles.item}>Item</div>
+      <div style={styles.item}>Details</div>
+
+      <div style={styles.cartContainer}>
+        <div style={styles.item}>Name</div>
+        <div style={styles.item}>Number</div>
       </div>
-      <div>
-        <div>Email</div>
-        <div>Payment Method</div>
+      <div style={styles.cartContainer}>
+        <div style={styles.item}>Email</div>
+        <div style={styles.item}>Payment Method</div>
       </div>
-      <div>
-        <div>Address</div>
-        <div>State</div>
+      <div style={styles.cartContainer}>
+        <div style={styles.item}>Address</div>
+        <div style={styles.item}>State</div>
       </div>
-      <div>
-        <div>City</div>
-        <div>Pin Code</div>
+      <div style={styles.cartContainer}>
+        <div style={styles.item}>City</div>
+        <div style={styles.item}>Pin Code</div>
       </div>
       <Link to={"/success"}>
-        <button>Order Now</button>
+        <button style={styles.item}>Order Now</button>
       </Link>
     </div>
   );

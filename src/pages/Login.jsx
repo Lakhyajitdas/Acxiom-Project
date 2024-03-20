@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const submitForm = () => {
-  console.log("Submitting form");
-};
+// const submitForm = () => {
+//   console.log("Submitting form");
+// };
 
 const clear = () => {
   console.log("Clear form");

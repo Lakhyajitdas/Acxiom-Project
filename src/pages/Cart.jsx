@@ -2,6 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
+  const styles = {
+    cartContainerChild: {
+      backgroundColor: "blue",
+      color: "white",
+      padding: "10px 20px",
+    },
+    cartContainer: {
+      display: "flex",
+      flexDirection: "column",
+      margin: "20px 0px",
+
+      gap: "20px",
+      justifyContent: "space-between",
+    },
+  };
+
   return (
     <div
       style={{
@@ -11,7 +27,15 @@ const Cart = () => {
         gap: "20px",
       }}
     >
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          margin: "20px 0px",
+          gap: "20px",
+          justifyContent: "space-between",
+        }}
+      >
         <div>Home</div>
         <div>View Product</div>
         <div>Request Item</div>
@@ -19,42 +43,67 @@ const Cart = () => {
         <div>LogOut</div>
       </div>
 
-      <div>Shopping Cart</div>
+      <div
+        style={{
+          margin: "0px 300px",
+          padding: "5px 0px",
+          backgroundColor: "skyblue",
+        }}
+      >
+        Shopping Cart
+      </div>
 
-      <div>
-        <div>
-          <div>Image</div>
-          <div>Image</div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          margin: "20px 0px",
+          gap: "20px",
+          justifyContent: "space-between",
+        }}
+      >
+        <div style={styles.cartContainer}>
+          <div style={styles.cartContainerChild}>Image</div>
+          <div style={styles.cartContainerChild}>Image</div>
         </div>
 
-        <div>
-          <div>Name</div>
-          <div>Product Name</div>
+        <div style={styles.cartContainer}>
+          <div style={styles.cartContainerChild}>Name</div>
+          <div style={styles.cartContainerChild}>Product Name</div>
         </div>
-        <div>
-          <div>Price</div>
-          <div>100/-</div>
+        <div style={styles.cartContainer}>
+          <div style={styles.cartContainerChild}>Price</div>
+          <div style={styles.cartContainerChild}>100/-</div>
         </div>
-        <div>
-          <div>Quantity</div>
-          <div>2 </div>
+        <div style={styles.cartContainer}>
+          <div style={styles.cartContainerChild}>Quantity</div>
+          <div style={styles.cartContainerChild}>2 </div>
         </div>
-        <div>
-          <div>Total Price</div>
-          <div>200/-</div>
+        <div style={styles.cartContainer}>
+          <div style={styles.cartContainerChild}>Total Price</div>
+          <div style={styles.cartContainerChild}>200/-</div>
         </div>
-        <div>
-          <div>Action</div>
-          <div>remove</div>
+        <div style={styles.cartContainer}>
+          <div style={styles.cartContainerChild}>Action</div>
+          <div style={styles.cartContainerChild}>remove</div>
         </div>
       </div>
 
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          padding: "20px 100px",
+          backgroundColor: "blue",
+          color: "white",
+        }}
+      >
+        <div>Grand Total</div>
+        <div>200/-</div>
         <div>
-          <div>Grand Total</div>
-          <div>200/-</div>
+          <button>Delete All</button>
         </div>
-        <div>Delete All</div>
       </div>
       <Link to={"/checkout"}>
         <button>Proceed to Checkout</button>

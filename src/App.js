@@ -16,7 +16,6 @@ import UserPortal from "./pages/UserPortal";
 import VendorPage from "./pages/VendorPage";
 import Vendor from "./pages/Vendor";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useLocalStorage } from "@uidotdev/usehooks";
 import MaintainUser from "./pages/MaintainUser";
 
 function App() {

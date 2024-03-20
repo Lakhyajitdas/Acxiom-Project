@@ -26,26 +26,4 @@ const Admin = () => {
   );
 };
 
-const MaintainVendor = () => {
-  return (
-    <div>
-      <div>
-        <div>Membership</div>
-        <div>
-          <div>Add</div>
-          <div>Update</div>
-        </div>
-      </div>
-
-      <div>
-        <div>User Management</div>
-        <div>
-          <div>Add</div>
-          <div>Update</div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export default Admin;
