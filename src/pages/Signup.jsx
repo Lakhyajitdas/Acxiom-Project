@@ -12,9 +12,23 @@ const handleChange = () => {
 
 const Signup = ({ name }) => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        margin: "20px 100px",
+        gap: "20px",
+      }}
+    >
       <div>
-        <div>
+        <div
+          style={{
+            display: name !== "vendor" ? "block" : `none`,
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}
+        >
           <div>Chart</div>
           <div>Back</div>
         </div>
@@ -29,45 +43,54 @@ const Signup = ({ name }) => {
         </div>
 
         <form action="">
-          <div>
-            <label className={styles.label} htmlFor="UserId">
-              Name
-            </label>
-            <input type="text" id="UserId" name="userId" />
-          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              margin: "20px 100px",
+              gap: "20px",
+            }}
+          >
+            <div>
+              <label className={styles.label} htmlFor="UserId">
+                Name
+              </label>
+              <input type="text" id="UserId" name="userId" />
+            </div>
 
-          <div>
-            <label className={styles.label} htmlFor="Email">
-              Email
-            </label>
-            <input type="email" id="Email" name="Email" />
-          </div>
-          <div>
-            <label className={styles.label} htmlFor="Pass">
-              Password:
-            </label>
-            <input type="password" id="Pass" name="Pass" />
-          </div>
+            <div>
+              <label className={styles.label} htmlFor="Email">
+                Email
+              </label>
+              <input type="email" id="Email" name="Email" />
+            </div>
+            <div>
+              <label className={styles.label} htmlFor="Pass">
+                Password:
+              </label>
+              <input type="password" id="Pass" name="Pass" />
+            </div>
 
-          <div style={{ display: name === "vendor" ? "block" : `none` }}>
-            <label className={styles.label} htmlFor="Category">
-              Category
-            </label>
-            <select value="Category" onChange={handleChange}>
-              <option value="fruit" id="Category">
-                Drop Down
-              </option>
+            <div style={{ display: name === "vendor" ? "block" : `none` }}>
+              <label className={styles.label} htmlFor="Category">
+                Category
+              </label>
+              <select value="Category" onChange={handleChange}>
+                <option value="fruit" id="Category">
+                  Drop Down
+                </option>
 
-              <option value="Catering">Catering</option>
-              <option value="Florist">Florist</option>
-              <option value="Decoration">Decoration</option>
-              <option value="Lighting">Lighting</option>
-            </select>
+                <option value="Catering">Catering</option>
+                <option value="Florist">Florist</option>
+                <option value="Decoration">Decoration</option>
+                <option value="Lighting">Lighting</option>
+              </select>
+            </div>
+
+            <Link to={`/${name}`}>
+              <button>Sign Up</button>
+            </Link>
           </div>
-
-          <Link to={`/${name}`}>
-            <button>Sign Up</button>
-          </Link>
         </form>
       </div>
     </div>

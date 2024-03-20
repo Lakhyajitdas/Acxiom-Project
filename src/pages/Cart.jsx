@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        margin: "20px 100px",
+        gap: "20px",
+      }}
+    >
       <div>
         <div>Home</div>
         <div>View Product</div>

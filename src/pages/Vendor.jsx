@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 
 const Vendor = () => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        margin: "20px 100px",
+        gap: "20px",
+      }}
+    >
       <div>Welcome Vendor</div>
 
       <div>Your Item</div>

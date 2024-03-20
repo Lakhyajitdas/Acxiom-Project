@@ -3,10 +3,23 @@ import { Link } from "react-router-dom";
 
 const User = () => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        margin: "20px 100px",
+      }}
+    >
       <div>Welcome Use </div>
-      <div>
-        <Link to={"/vendor"}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          margin: "20px 100px",
+          gap: "20px",
+        }}
+      >
+        <Link to={"/vendorpage"}>
           <button>Vendor</button>
         </Link>
         <Link to={"/cart"}>
@@ -16,6 +29,8 @@ const User = () => {
         <Link to={"/"}>
           <button>Order Status</button>
         </Link>
+      </div>
+      <div>
         <Link to={"/"}>
           <button>Log Out</button>
         </Link>
